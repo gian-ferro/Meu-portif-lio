@@ -382,13 +382,27 @@ form .btn-enviar {
     text-align: center;
 }
 
-form .btn-enviar input {
-    width: 120px;
+form .btn-enviar button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
     background-color: #50FA7B;
-    color: #000000;
-    font-weight: 700;
+    border: 0;
+    border-radius: 30px;
     cursor: pointer;
     transition: .2s;
+    color: #000000;
+}
+
+
+.success {
+    color: greenyellow;
+    text-align: center;
+}
+
+.error {
+    color: tomato;
+    text-align: center;
 }
 
 /* ESTILO DO RODAPÉ */

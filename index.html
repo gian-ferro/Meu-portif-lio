@@ -118,7 +118,7 @@
 
                     <div class="especialidades-box">
                         <i class="bi bi-play-fill"></i>
-                        <h3>Ediçao</h3>
+                        <h3>Edição</h3>
                         <ul>
                             <li>Adobe Premiere</li>
                             <li>DaVinci Resolve</li>
@@ -140,9 +140,9 @@
                         <p>Como estudante dedicado nas áreas de desenvolvimento web, programação fullstack e edição de vídeo, estou adquirindo habilidades essenciais e práticas. No desenvolvimento web, trabalho com HTML, CSS e JavaScript para criar interfaces e experiências interativas.</p>
                         <p>Na programação fullstack, foco em Python e Flask, com experiência em construção de APIs e gerenciamento de banco de dados. Além disso, na edição de vídeo, utilizo Adobe Premiere e DaVinci Resolve para produzir conteúdo visualmente envolvente. Estou comprometido em aplicar e expandir meu conhecimento para entregar soluções digitais eficazes e impactantes.</p>
                         <div class="btn-social">
-                            <a href="https://github.com/gian-ferro"><button><i class="bi bi-github"></i></i></button></a>
+                            <a href="https://github.com/gian-ferro"><button><i class="bi bi-github"></i></button></a>
                             <a href="https://www.linkedin.com/in/gian-ferro-525912a2/"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="mailto:gian.costaferro@gmail.com"><button><i class="bi bi-envelope"></i></i></button></a>
+                    <a href="mailto:gian.costaferro@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
                         </div><!--btn-social-->
                     </div><!--txt-sobre-->
                 </div><!--flex-->
@@ -170,12 +170,14 @@
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-                <form action="envia.php" method="post">
-                    <input type="text" name="nome" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="email" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="telefone" id="" placeholder="Seu celular:">
-                    <textarea name="mensagem" id="" placeholder="Sua mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                <form id="contactForm" action="https://formsubmit.co/gian.costaferro@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Seu celular:" required>
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><button type="submit">ENVIAR</button></div>
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
@@ -207,6 +209,24 @@
         </div><!--interface-->
     </footer>
 
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();  // Impede o envio padrão do formulário
+            
+            // Tenta enviar o formulário usando o fetch
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                alert('Formulário enviado com sucesso!');
+                this.reset(); 
+            })
+        });
+    </script>
+       
 </body>
 
 </html>
