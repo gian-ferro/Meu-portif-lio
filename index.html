@@ -9,26 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- FIM GOOGLE FONTES -->
+    
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- FIM BOOTSTRAP ICONS -->
+    
+    <!-- CSS PRINCIPAL -->
     <link rel="stylesheet" href="style.css">
-
+    
+    <!-- JS PARA O MENU -->
     <script src="menu.js" defer></script>
-
+    
     <title>iron back.DEV</title>
 </head>
 
 <body>
     
     <header>
+        <!-- Cabeçalho do site -->
         <div class="interface">
+            <!-- Logotipo da página -->
             <div class="logo">
                 <a href="#">
                     <img src="images/logo.png" alt="Logo da Agência BRN">
                 </a>
             </div><!--logo-->
 
+            <!-- Menu de navegação para desktop -->
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#topo-do-site">Início</a></li>
@@ -38,16 +45,19 @@
                 </ul>
             </nav>
 
+            <!-- Botão de contato -->
             <div class="btn-contato">
                 <a href="https://api.whatsapp.com/send?phone=5511963203341&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seus%20servi%C3%A7os.">
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->
 
+            <!-- Botão para abrir o menu mobile -->
             <div class="btn-abrir-menu" id="btn-menu">
                 <i class="bi bi-list"></i>
             </div>
 
+            <!-- Menu de navegação para mobile -->
             <div class="menu-mobile" id="menu-mobile">
                 <div class="btn-fechar">
                     <i class="bi bi-x-lg"></i>
@@ -64,18 +74,23 @@
                 </nav>
 
             </div><!--menu-mobile-->
+            
+            <!-- Sobreposição para o menu mobile -->
             <div class="overlay-menu" id="overlay-menu"></div>
         </div><!--interface-->
     </header>
 
     <main>
+        <!-- Seção principal do topo do site -->
         <section id="topo-do-site" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
+                    <!-- Texto principal da seção topo -->
                     <div class="txt-topo-site">
                         <h1>TRANSFORMANDO IDEIAS EM <span>SOLUÇÕES DIGITAIS.</span></h1>
                         <p>Combinando design criativo, tecnologias avançadas e estratégias personalizadas, converto desafios em resultados concretos. Vou criar algo que realmente faça a diferença no seu projeto.</p>
 
+                        <!-- Botão de contato na seção topo -->
                         <div class="btn-contato">
                             <a href="https://api.whatsapp.com/send?phone=5511963203341&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seus%20servi%C3%A7os.">
                                 <button>Entre em contato</button>
@@ -83,6 +98,7 @@
                         </div>
                     </div><!--txt-topo-site-->
 
+                    <!-- Imagem principal da seção topo -->
                     <div class="img-topo-site">
                         <img src="images/pessoa.png" alt="">
                     </div><!--img-topo-site-->
@@ -128,31 +144,38 @@
             </div><!--interface-->
         </section><!--especiliadades-->
 
+        <!-- Seção sobre o autor -->
         <section id="sobre" class="sobre">
             <div class="interface">
                 <div class="flex">
+                    <!-- Imagem da seção sobre -->
                     <div class="img-sobre">
                         <img src="images/foto.png" alt="">
                     </div><!--img-sobre-->
 
+                    <!-- Texto da seção sobre -->
                     <div class="txt-sobre">
                         <h2>MUITO PRAZER, <span>SOU GIAN FERRO.</span></h2>
                         <p>Como estudante dedicado nas áreas de desenvolvimento web, programação fullstack e edição de vídeo, estou adquirindo habilidades essenciais e práticas. No desenvolvimento web, trabalho com HTML, CSS e JavaScript para criar interfaces e experiências interativas.</p>
                         <p>Na programação fullstack, foco em Python e Flask, com experiência em construção de APIs e gerenciamento de banco de dados. Além disso, na edição de vídeo, utilizo Adobe Premiere e DaVinci Resolve para produzir conteúdo visualmente envolvente. Estou comprometido em aplicar e expandir meu conhecimento para entregar soluções digitais eficazes e impactantes.</p>
+                        
+                        <!-- Botões de redes sociais -->
                         <div class="btn-social">
                             <a href="https://github.com/gian-ferro"><button><i class="bi bi-github"></i></button></a>
                             <a href="https://www.linkedin.com/in/gian-ferro-525912a2/"><button><i class="bi bi-linkedin"></i></button></a>
-                    <a href="mailto:gian.costaferro@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
+                            <a href="mailto:gian.costaferro@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
                         </div><!--btn-social-->
                     </div><!--txt-sobre-->
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--sobre-->
 
+        <!-- Seção de portfólio -->
         <section id="portfolio" class="portfolio">
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
+                    <!-- Imagens do portfólio com sobreposição de texto -->
                     <div class="img-port" style="background-image: url(images/imagem.jpg);">
                         <div class="overlay">Em breve.</div>
                     </div>
@@ -166,11 +189,13 @@
             </div><!--interface-->
         </section><!--portfolio-->
 
+        <!-- Seção de formulário de contato -->
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
                 <form id="contactForm" action="https://formsubmit.co/gian.costaferro@gmail.com" method="POST">
+                    <!-- Campos do formulário -->
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="_honey" style="display:none">
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
@@ -209,24 +234,5 @@
         </div><!--interface-->
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();  // Impede o envio padrão do formulário
-            
-            // Tenta enviar o formulário usando o fetch
-            fetch(this.action, {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                alert('Formulário enviado com sucesso!');
-                this.reset(); 
-            })
-        });
-    </script>
-       
 </body>
-
 </html>

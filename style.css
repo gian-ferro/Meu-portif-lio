@@ -1,187 +1,216 @@
 /* ESTILO GERAL */
+/* Reset de margens e preenchimentos para todos os elementos, define a caixa de borda e a fonte padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fonte padrão para o site */
 }
 
+/* Define o fundo e a altura do corpo da página */
 body {
-    background-color: #282A36;
-    height: 100vh;
+    background-color: #282A36; /* Cor de fundo escura */
+    height: 100vh; /* Altura total da tela */
 }
 
+/* Container centralizado com largura máxima */
 .interface {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1280px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
+/* Flexbox básico para exibir itens em linha ou coluna */
 .flex {
     display: flex;
 }
 
+/* Estilo do botão de contato */
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #50FA7B;
+    background-color: #50FA7B; /* Cor de fundo verde claro */
     border: 0;
-    border-radius: 30px;
+    border-radius: 30px; /* Bordas arredondadas */
     cursor: pointer;
-    transition: .2s;
-    color: #000000;
+    transition: .2s; /* Transição suave */
+    color: #000000; /* Cor do texto */
 }
 
+/* Estilo dos títulos h2 */
 h2.titulo {
-    color: #fff;
+    color: #fff; /* Cor branca */
     font-size: 38px;
     text-align: center;
 }
 
+/* Estilo do span dentro do h2 */
 h2.titulo span {
-    color: #FF79C6;
+    color: #FF79C6; /* Cor rosa */
 }
 
+/* Efeito hover para botões e campos de formulário */
 button:hover,
 form .btn-enviar input:hover {
-    box-shadow: 0px 0px 8px #50FA7B;
-    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #50FA7B; /* Sombra verde ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
 }
 
-
 /* ESTILO DO CABEÇALHO */
+/* Estilo do header com padding */
 header {
     padding: 40px 4%;
 }
 
+/* Flexbox para o conteúdo do header */
 header>.interface {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaçamento entre itens */
 }
 
+/* Estilo dos links no header */
 header a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Cor branca */
+    text-decoration: none; /* Remove sublinhado */
     display: inline-block;
-    transition: .2s;
+    transition: .2s; /* Transição suave */
 }
 
+/* Estilo dos links no menu desktop ao passar o mouse */
 header nav.menu-desktop a:hover {
-    color: #FF79C6;
-    transform: scale(1.05);
+    color: #FF79C6; /* Cor rosa ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
 }
 
+/* Remove marcadores de lista para o menu */
 header nav ul {
     list-style-type: none;
 }
 
+/* Estilo dos itens de menu no desktop */
 header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 40px; /* Espaçamento interno */
 }
 
 /* ESTILO DO MENU MOBILE */
 
+/* Esconde o botão para abrir o menu no mobile */
 .btn-abrir-menu{
     display: none;
 }
 
+/* Estilo do ícone no botão do menu */
 .btn-abrir-menu i{
-    color: #FF79C6;
-    font-size: 40px;
+    color: #FF79C6; /* Cor rosa */
+    font-size: 40px; /* Tamanho do ícone */
 }
 
+/* Estilo do menu mobile */
 .menu-mobile{
-    background-color: #44475A;
-    height: 100vh;
+    background-color: #44475A; /* Cor de fundo escura */
+    height: 100vh; /* Altura total da tela */
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 99999;
-    width: 0%;
+    z-index: 99999; /* Camada superior */
+    width: 0%; /* Inicialmente escondido */
     overflow: hidden;
-    transition: .5s;
+    transition: .5s; /* Transição suave */
 }
 
+/* Estilo do menu mobile quando aberto */
 .menu-mobile.abrir-menu{
-    width: 70%;
+    width: 70%; /* Largura do menu quando aberto */
 }
 
+/* Exibe a sobreposição do menu quando o menu está aberto */
 .menu-mobile.abrir-menu ~ .overlay-menu{
     display: block;
 }
 
-
+/* Estilo do botão para fechar o menu mobile */
 .menu-mobile .btn-fechar{
     padding: 20px 5%;
 }
 
+/* Estilo do ícone no botão de fechar o menu */
 .menu-mobile .btn-fechar i{
-    color: #FF79C6;
-    font-size: 30px;
+    color: #FF79C6; /* Cor rosa */
+    font-size: 30px; /* Tamanho do ícone */
 }
 
+/* Estilo do menu mobile para alinhar os itens à direita */
 .menu-mobile nav ul{
     text-align: right;
 }
 
+/* Estilo dos links no menu mobile */
 .menu-mobile nav ul li a{
-    color: #fff;
+    color: #fff; /* Cor branca */
     font-size: 20px;
     font-weight: 300;
-    padding: 20px 8%;
-    display: block;
+    padding: 20px 8%; /* Espaçamento interno */
+    display: block; /* Bloco para toda a largura */
 }   
 
+/* Estilo dos links no menu mobile ao passar o mouse */
 .menu-mobile nav ul li a:hover{
-    background-color: #FF79C6;
-    color: #000;
+    background-color: #FF79C6; /* Cor de fundo rosa ao passar o mouse */
+    color: #000; /* Cor do texto preta */
 }
 
+/* Estilo da sobreposição do menu */
 .overlay-menu{
-    background-color: #000000df;
+    background-color: #000000df; /* Cor preta com opacidade */
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 88888;
-    display: none;
+    z-index: 88888; /* Camada inferior ao menu */
+    display: none; /* Inicialmente escondido */
 }
 
 /* ESTILO DO TOPO DO SITE */
+/* Estilo da seção topo do site */
 section.topo-do-site {
     padding: 40px 4%;
 }
 
+/* Flexbox para o topo do site */
 section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    gap: 90px; /* Espaçamento entre itens */
 }
 
+/* Estilo do título no topo do site */
 .topo-do-site h1 {
-    color: #fff;
+    color: #fff; /* Cor branca */
     font-size: 42px;
-    line-height: 40px;
+    line-height: 40px; /* Altura da linha */
 }
 
+/* Estilo do span dentro do título no topo do site */
 .topo-do-site .txt-topo-site h1 span {
-    color: #FF79C6;
+    color: #FF79C6; /* Cor rosa */
 }
 
+/* Estilo do parágrafo no topo do site */
 .topo-do-site .txt-topo-site p {
-    color: #fff;
-    margin: 40px 0;
+    color: #fff; /* Cor branca */
+    margin: 40px 0; /* Margem superior e inferior */
 }
 
+/* Estilo da imagem no topo do site com animação */
 .topo-do-site .img-topo-site img {
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
+    animation: flutuar 2s ease-in-out infinite alternate; /* Animação de flutuação */
 }
 
-
+/* Animação de flutuação */
 @keyframes flutuar {
     0% {
         top: 0;
@@ -193,348 +222,369 @@ section.topo-do-site .flex {
 }
 
 /* ESTILO DAS ESPECIALIDADES */
+/* Estilo da seção de especialidades */
 section.especiliadades {
     padding: 40px 4%;
 }
 
+/* Flexbox para a seção de especialidades */
 section.especiliadades .flex {
     gap: 20px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-between; /* Espaçamento entre itens */
+    flex-direction: row; /* Direção dos itens */
 }
 
+/* Estilo das caixas de especialidades */
 .especiliadades .especialidades-box {
     display: flex;
     flex-direction: column; 
     align-items: center;   
     justify-content: center; 
-    color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 45px;
-    transition: .2s;
-    text-align: center; 
+    color: #fff; /* Cor do texto */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-top: 45px; /* Margem superior */
+    transition: .2s; /* Transição suave */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Efeito hover nas caixas de especialidades */
 .especiliadades .especialidades-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #ffffff78;
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 0 20px #ffffff78; /* Sombra suave */
 }
 
+/* Estilo do ícone dentro da caixa de especialidades */
 .especiliadades .especialidades-box i {
     display: block;
     font-size: 70px;
-    color: #50FA7B;
-    margin-bottom: 20px;
+    color: #50FA7B; /* Cor verde claro */
+    margin-bottom: 20px; /* Margem inferior */
 }
 
+/* Estilo do título dentro da caixa de especialidades */
 .especiliadades .especialidades-box h3 {
-    text-align: center;
+    text-align: center; /* Alinha o texto ao centro */
     font-size: 35px;
-    margin: 15px 0;
+    margin: 15px 0; /* Margem superior e inferior */
 }
 
+/* Estilo da lista dentro da caixa de especialidades */
 .especiliadades .especialidades-box ul {
-    list-style: none; 
+    list-style: none; /* Remove marcadores de lista */
     padding: 0; 
     margin: 0; 
-    padding: 0;
-    text-align: center; 
-    margin: 0; 
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Estilo dos itens da lista dentro da caixa de especialidades */
 .especiliadades .especialidades-box li {
-    margin: 5px 0; 
+    margin: 5px 0; /* Margem superior e inferior */
     font-size: 18px;
 }
 
 /* ESTILO DO SOBRE */
+/* Estilo da seção sobre */
 section.sobre {
     padding: 80px 4%;
 }
 
+/* Flexbox para a seção sobre */
 section.sobre .flex {
     align-items: center;
-    gap: 60px;
+    gap: 60px; /* Espaçamento entre itens */
 }
 
+/* Estilo do texto na seção sobre */
 .sobre .txt-sobre {
-    color: #fff;
+    color: #fff; /* Cor branca */
 }
 
+/* Estilo do título na seção sobre */
 .sobre .txt-sobre h2 {
     font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 30px;
+    line-height: 40px; /* Altura da linha */
+    margin-bottom: 30px; /* Margem inferior */
 }
 
+/* Estilo do span dentro do título na seção sobre */
 .sobre .txt-sobre h2 span {
-    color: #FF79C6;
-    display: block;
+    color: #FF79C6; /* Cor rosa */
+    display: block; /* Bloco para o texto */
 }
 
+/* Estilo do parágrafo na seção sobre */
 .sobre .txt-sobre p {
-    margin: 20px 0;
-    text-align: justify;
+    margin: 20px 0; /* Margem superior e inferior */
+    text-align: justify; /* Justifica o texto */
 }
 
+/* Estilo da imagem na seção sobre */
 .img-sobre img{
-    border-radius: 40px;
+    border-radius: 40px; /* Bordas arredondadas */
 }
 
+/* Estilo dos botões sociais */
 .btn-social button {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 50%; /* Botão circular */
     border: none;
-    background-color: #50FA7B;
+    background-color: #50FA7B; /* Cor de fundo verde claro */
     font-size: 22px;
     cursor: pointer;
-    margin: 0 5px;
-    transition: .2s;
-    color: #000000;
+    margin: 0 5px; /* Margem lateral */
+    transition: .2s; /* Transição suave */
+    color: #000000; /* Cor do texto */
 }
 
 /* ESTILO DO PORTFÓLIO */
+/* Estilo da seção de portfólio */
 section.portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    box-shadow: 0 0 40px 10px #ffffff1d; /* Sombra suave */
 }
 
+/* Flexbox para a seção de portfólio */
 section.portfolio .flex {
-    justify-content: space-around;
-    margin-top: 60px;
+    justify-content: space-around; /* Espaçamento entre itens */
+    margin-top: 60px; /* Margem superior */
 }
 
+/* Estilo das imagens no portfólio */
 .img-port {
     width: 360px;
     height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
+    background-size: cover; /* Cobre toda a área */
+    background-position: 100% 0%; /* Posição inicial da imagem */
+    transition: 8s; /* Transição longa */
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 40px; /* Bordas arredondadas */
     position: relative;
 }
 
+/* Efeito hover para imagens do portfólio */
 .img-port:hover {
-    background-position: 100% 100%;
+    background-position: 100% 100%; /* Muda a posição da imagem */
 }
 
+/* Estilo da sobreposição na imagem do portfólio */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
-    border-radius: 40px;
+    background-color: #000000b8; /* Cor preta com opacidade */
+    border-radius: 40px; /* Bordas arredondadas */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
-    color: #fff;
-    opacity: 0;
-    transition: .5s;
+    color: #fff; /* Cor do texto */
+    opacity: 0; /* Inicialmente invisível */
+    transition: .5s; /* Transição suave */
 }
 
+/* Estilo da sobreposição ao passar o mouse */
 .overlay:hover {
-    opacity: 1;
+    opacity: 1; /* Torna a sobreposição visível */
 }
 
 /* ESTILO DO FORMULÁRIO DE CONTATO */
+/* Estilo da seção de formulário */
 section.formulario {
     padding: 80px 4%;
 }
 
+/* Estilo do formulário */
 form {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 500px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza horizontalmente */
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 40px;
-    color: #6272A4;;
+    justify-content: center; /* Centraliza itens */
+    flex-direction: column; /* Alinha itens em coluna */
+    gap: 10px; /* Espaçamento entre itens */
+    margin-top: 40px; /* Margem superior */
+    color: #6272A4; /* Cor do texto */
 }
 
+/* Estilo dos campos de entrada e textarea no formulário */
 form input,
 form textarea {
-    width: 100%;
-    background-color: #44475A;
+    width: 100%; /* Largura total */
+    background-color: #44475A; /* Cor de fundo escura */
     border: 0;
     outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: #fff;
+    padding: 20px 15px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
     font-size: 18px;
 }
 
+/* Estilo específico para o textarea */
 form textarea {
-    resize: none;
-    max-height: 200px;
+    resize: none; /* Impede o redimensionamento */
+    max-height: 200px; /* Altura máxima */
 }
 
+/* Estilo do botão de envio no formulário */
 form .btn-enviar {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px; /* Margem superior */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Estilo do botão de envio dentro da classe btn-enviar */
 form .btn-enviar button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #50FA7B;
+    background-color: #50FA7B; /* Cor de fundo verde claro */
     border: 0;
-    border-radius: 30px;
+    border-radius: 30px; /* Bordas arredondadas */
     cursor: pointer;
-    transition: .2s;
-    color: #000000;
-}
-
-
-.success {
-    color: greenyellow;
-    text-align: center;
-}
-
-.error {
-    color: tomato;
-    text-align: center;
+    transition: .2s; /* Transição suave */
+    color: #000000; /* Cor do texto */
 }
 
 /* ESTILO DO RODAPÉ */
-
+/* Estilo do rodapé */
 footer {
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    box-shadow: 0 0 40px 10px #ffffff1d; /* Sombra suave */
 }
 
+/* Flexbox para o rodapé */
 footer .flex {
-    justify-content: space-between;
+    justify-content: space-between; /* Espaçamento entre itens */
 }
 
+/* Estilo da linha de separação no rodapé */
 footer .line-footer {
-    padding: 20px 0;
+    padding: 20px 0; /* Espaçamento vertical */
 }
 
+/* Estilo da borda superior na linha de rodapé */
 .borda {
-    border-top: 2px solid #FF79C6;
+    border-top: 2px solid #FF79C6; /* Borda rosa */
 }
 
+/* Estilo do ícone dentro da linha de rodapé */
 footer .line-footer p i {
-    color: #FF79C6;
-    font-size: 22px;
+    color: #FF79C6; /* Cor rosa */
+    font-size: 22px; /* Tamanho do ícone */
 }
 
+/* Estilo dos links dentro da linha de rodapé */
 footer .line-footer p a {
-    color: #fff;
+    color: #fff; /* Cor branca */
 }
 
+/* ESTILO RESPONSIVO */
+/* Estilos aplicados para telas com largura máxima de 1020px */
 @media screen and (max-width: 1020px) {
 
     .menu-desktop {
-        display: none;
-      }
+        display: none; /* Esconde o menu desktop */
+    }
     
-      .btn-abrir-menu {
-        display: block;
-      }
+    .btn-abrir-menu {
+        display: block; /* Exibe o botão para abrir o menu mobile */
+    }
 
     /* CLASSES GERAIS */
     .flex {
-        flex-direction: column;
+        flex-direction: column; /* Muda a direção para coluna */
     }
 
     .topo-do-site .flex{
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* Inverte a ordem dos itens */
     }
 
     h2.titulo {
-        font-size: 34px;
-        line-height: 30px;
+        font-size: 34px; /* Reduz o tamanho da fonte */
+        line-height: 30px; /* Ajusta a altura da linha */
     }
 
     /* CABEÇALHO */
     .menu-desktop,
     .btn-contato {
-        display: none;
+        display: none; /* Esconde o menu desktop e o botão de contato */
     }
 
     /* TOPO DO SITE */
 
     section.topo-do-site .flex {
-        gap: 40px;
+        gap: 40px; /* Reduz o espaçamento entre itens */
     }
 
     section.topo-do-site {
-        padding: 20px 8%;
+        padding: 20px 8%; /* Ajusta o padding */
     }
 
     .topo-do-site h1 {
-        font-size: 30px;
+        font-size: 30px; /* Reduz o tamanho da fonte */
     }
 
     .topo-do-site .img-topo-site img {
-        width: 100%;
+        width: 100%; /* Ajusta a largura da imagem */
     }
 
     /* ESPECIALIDADES */
     section.especiliadades .flex {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 20px; /
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza itens */
+        gap: 20px; /* Ajusta o espaçamento entre itens */
     }
 
-
     .especiliadades .especialidades-box {
-        width: 100%;
-        max-width: 600px; 
+        width: 100%; /* Largura total */
+        max-width: 600px; /* Largura máxima */
     }
 
     /* SOBRE */
     section.sobre {
-        padding: 80px 8%;
+        padding: 80px 8%; /* Ajusta o padding */
     }
 
     .sobre .txt-sobre h2 {
-        font-size: 34px;
-        line-height: 35px;
-        text-align: center;
+        font-size: 34px; /* Reduz o tamanho da fonte */
+        line-height: 35px; /* Ajusta a altura da linha */
+        text-align: center; /* Alinha o texto ao centro */
     }
     
     .btn-social{
-        text-align: center;
+        text-align: center; /* Alinha os botões sociais ao centro */
     }
 
     .img-sobre img{
-        width: 100%;
+        width: 100%; /* Ajusta a largura da imagem */
     }
 
     /* PORTFÓLIO */
     section.portfolio {
-        padding: 80px 8%;
+        padding: 80px 8%; /* Ajusta o padding */
     }
 
     .img-port {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
+        width: 100%; /* Ajusta a largura */
+        max-width: 360px; /* Largura máxima */
+        margin: 0 auto; /* Centraliza a imagem */
     }
     
     section.portfolio .flex {
-       gap: 60px;
+       gap: 60px; /* Ajusta o espaçamento entre itens */
     }
 
     /* RODAPÉ */
     footer .flex {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: column; /* Muda a direção para coluna */
+        gap: 30px; /* Ajusta o espaçamento entre itens */
     }
 
     footer .line-footer {
-        text-align: center;
+        text-align: center; /* Alinha o texto ao centro */
     }
 }
